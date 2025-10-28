@@ -1,0 +1,230 @@
+/* Apple-Inspired Modern Budget UI Theme */
+/* Compact, elegant, and balanced design */
+
+/* General rules */
+* {
+    font-family: "Poppins", "SF Pro Display", sans-serif;
+    color: #202124;
+    letter-spacing: 0.2px;
+    font-weight: 500;
+}
+
+QWidget {
+    background-color: #FAFAFA;
+}
+
+/* General containers */
+#grpIncome, #grpCategories, #Card {
+    background: #FFFFFF;
+    border: 1px solid rgba(224, 224, 224, 0.85);
+    border-radius: 12px;
+    padding: 14px 16px;
+    transition: all 0.25s ease-in-out;
+}
+
+#Card:hover {
+    border: 1px solid rgba(0, 122, 255, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.08);
+}
+
+/* Titles */
+#lblIncomeTitle {
+    qproperty-alignment: 'AlignRight | AlignVCenter';
+    color: #111111;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 0 6px 2px 0;
+    text-align: right;
+}
+
+QGroupBox {
+    border: none;
+    margin-top: 8px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top right;
+    padding: 0px 8px;
+    color: #1F1F1F;
+    font-size: 15px;
+    font-weight: 600;
+    background: transparent;
+    text-align: right;
+}
+
+/* Input fields */
+QLineEdit {
+    border: 1px solid #D6D6D6;
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 13px;
+    background: #FAFAFA;
+    min-height: 22px;
+    max-height: 25px;
+    transition: all 0.25s ease;
+}
+
+QLineEdit:hover {
+    background: #FFFFFF;
+    border: 1px solid #C0C0C0;
+}
+
+QLineEdit:focus {
+    border: 1px solid #007AFF;
+    box-shadow: 0 0 0 2px rgba(0,122,255,0.12);
+}
+
+/* Buttons */
+QPushButton {
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.25s ease-in-out;
+    font-family: "Poppins", "SF Pro Display", sans-serif;
+}
+
+/* Main action buttons */
+#btnSaveIncome,
+#btnAddCategory,
+#btnAddExpense {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #007AFF, stop:1 #005BEA);
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 5px 14px;
+    min-height: 28px;
+    max-height: 32px;
+}
+
+#btnSaveIncome:hover,
+#btnAddCategory:hover,
+#btnAddExpense:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #238CFF, stop:1 #006BE6);
+    box-shadow: 0 2px 6px rgba(0,122,255,0.25);
+}
+
+#btnSaveIncome:pressed,
+#btnAddCategory:pressed,
+#btnAddExpense:pressed {
+    background: #0056D9;
+    transform: scale(0.98);
+}
+
+/* Table buttons */
+#btnEdit, #btnDelete {
+    background: transparent;
+    color: #007AFF;
+    font-size: 12.5px;
+    font-weight: 600;
+    border: none;
+}
+
+#btnEdit:hover, #btnDelete:hover {
+    color: #005BEA;
+    text-decoration: underline;
+}
+
+/* Tables */
+QTableWidget, QTableView {
+    background: #FFFFFF;
+    border: none;
+    gridline-color: #E0E0E0;
+    font-size: 13px;
+    selection-background-color: #E8F0FE;
+    selection-color: #0B5ED7;
+    outline: none;
+}
+
+QTableWidget:focus, QTableView:focus {
+    outline: none;
+}
+
+QHeaderView::section {
+    background-color: #F8F9FA;
+    color: #333;
+    font-weight: 600;
+    font-size: 13px;
+    border: none;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 5px;
+}
+
+QTableWidget::item:selected {
+    background: #E8F0FE;
+    color: #0B5ED7;
+}
+
+/* Progress bar */
+QProgressBar {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    background: #F5F5F5;
+    height: 14px;
+    color: #212121;
+    font-weight: 600;
+    font-size: 11px;
+    text-align: center;
+    padding: 2px;
+}
+
+QProgressBar::chunk {
+    border-radius: 6px;
+    background-color: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 0,
+        stop: 0 #4CAF50,
+        stop: 0.5 #66BB6A,
+        stop: 1 #81C784
+    );
+    margin: 1px;
+}
+
+/* Secondary text */
+#infoLabel {
+    font-weight: 500;
+    color: #5F6368;
+    font-size: 13px;
+}
+
+/* Toast notifications */
+#toastSuccess {
+    background-color: rgba(0, 122, 255, 0.92);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.25);
+}
+
+#toastError {
+    background-color: rgba(255, 69, 58, 0.92);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(255, 69, 58, 0.25);
+}
+
+/* Scrollbar */
+QScrollBar:vertical {
+    width: 8px;
+    background: transparent;
+    margin: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #C5C5C5;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #A0A0A0;
+}
+
+/* Scroll area style */
+QScrollArea {
+    border: none;
+    background: transparent;
+    outline: none;
+}

@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Build artifacts from PyInstaller
+build/
+dist/
+*.spec
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# IDE and editor settings
+.vscode/
+.idea/
+
+# Data files (runtime-created)
+core/data/
+
+# OS metadata
+.DS_Store
+Thumbs.db

@@ -1,0 +1,178 @@
+/* Apple Inspired Dialogs - Elegant and Minimal */
+
+/* Dialog container */
+QDialog {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 24px 28px;
+    border: 1px solid rgba(230,230,230,0.9);
+    font-family: "Poppins", "SF Pro Display", sans-serif;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Labels */
+QLabel {
+    font-size: 14px;
+    color: #1C1C1E;
+    font-weight: 500;
+    background: transparent;
+}
+
+QLabel[objectName="titleLabel"] {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 10px;
+}
+
+QLabel[objectName="hintLabel"] {
+    font-size: 12.5px;
+    color: #6E6E73;
+}
+
+/* Input fields */
+QLineEdit, QDoubleSpinBox, QSpinBox {
+    border: 1px solid #D6D6D6;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background: #FAFAFA;
+    color: #1C1C1E;
+    transition: all 0.25s ease;
+}
+
+QLineEdit:hover, QDoubleSpinBox:hover, QSpinBox:hover {
+    background: #FFFFFF;
+    border: 1px solid #BEBEBE;
+}
+
+QLineEdit:focus, QDoubleSpinBox:focus, QSpinBox:focus {
+    border: 1px solid #007AFF;
+    box-shadow: 0 0 0 3px rgba(0,122,255,0.15);
+}
+
+/* Buttons */
+QPushButton {
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 8px 22px;
+    font-size: 14px;
+    transition: all 0.25s ease-in-out;
+    font-family: "Poppins", "SF Pro Display", sans-serif;
+}
+
+/* Save / OK buttons */
+QPushButton#saveBtn, QPushButton#okBtn {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #007AFF, stop:1 #005BEA);
+    color: #FFFFFF;
+}
+
+QPushButton#saveBtn:hover, QPushButton#okBtn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #238CFF, stop:1 #006BE6);
+    box-shadow: 0 4px 10px rgba(0,122,255,0.25);
+}
+
+QPushButton#saveBtn:pressed, QPushButton#okBtn:pressed {
+    background: #0056D9;
+    transform: scale(0.97);
+}
+
+/* Cancel / Close buttons */
+QPushButton#cancelBtn, QPushButton#closeBtn {
+    background: #F2F2F7;
+    color: #1C1C1E;
+}
+
+QPushButton#cancelBtn:hover, QPushButton#closeBtn:hover {
+    background: #E5E5EA;
+}
+
+QPushButton#cancelBtn:pressed, QPushButton#closeBtn:pressed {
+    background: #D8D8DC;
+}
+
+/* Message boxes (QMessageBox) */
+QMessageBox {
+    background: #FFFFFF;
+    border-radius: 14px;
+    border: 1px solid #E4E4E4;
+    padding: 24px;
+    font-family: "Poppins", "SF Pro Display", sans-serif;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+QMessageBox QLabel {
+    font-size: 14px;
+    color: #1C1C1E;
+}
+
+QMessageBox QPushButton[text="نعم"] {
+    background-color: #007AFF;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 6px 18px;
+    font-weight: 600;
+}
+
+QMessageBox QPushButton[text="نعم"]:hover {
+    background-color: #0A84FF;
+}
+
+QMessageBox QPushButton[text="إلغاء"] {
+    background-color: #F2F2F7;
+    color: #1C1C1E;
+    border-radius: 10px;
+    padding: 6px 18px;
+}
+
+QMessageBox QPushButton[text="إلغاء"]:hover {
+    background-color: #E5E5EA;
+}
+
+/* ComboBox */
+QComboBox {
+    border: 1px solid #D6D6D6;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background: #FAFAFA;
+    color: #1C1C1E;
+}
+
+QComboBox:hover {
+    background: #FFFFFF;
+    border: 1px solid #BEBEBE;
+}
+
+QComboBox:focus {
+    border: 1px solid #007AFF;
+    box-shadow: 0 0 0 3px rgba(0,122,255,0.15);
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #CFCFCF;
+    background: #FFFFFF;
+    selection-background-color: rgba(0,122,255,0.1);
+    selection-color: #007AFF;
+    outline: none;
+    border-radius: 8px;
+}
+
+/* SpinBox arrows */
+QAbstractSpinBox::up-button, QAbstractSpinBox::down-button {
+    border: none;
+    background: transparent;
+    subcontrol-origin: border;
+}
+
+QAbstractSpinBox::up-button:hover, QAbstractSpinBox::down-button:hover {
+    background: rgba(0,0,0,0.04);
+}
