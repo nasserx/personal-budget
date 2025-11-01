@@ -10,7 +10,7 @@
 }
 
 QWidget {
-    background-color: #FAFAFA;
+    background-color: #FFFFFFFF;
 }
 
 /* General containers */
@@ -18,7 +18,7 @@ QWidget {
     background: #FFFFFF;
     border: 1px solid rgba(224, 224, 224, 0.85);
     border-radius: 12px;
-    padding: 14px 16px;
+    padding: 2px 3px; /* minimal internal spacing */
     transition: all 0.25s ease-in-out;
 }
 
@@ -119,6 +119,7 @@ QPushButton {
     font-size: 12.5px;
     font-weight: 600;
     border: none;
+    qproperty-alignment: 'AlignCenter'; /* center align buttons inside cell */
 }
 
 #btnEdit:hover, #btnDelete:hover {
@@ -130,30 +131,44 @@ QPushButton {
 QTableWidget, QTableView {
     background: #FFFFFF;
     border: none;
-    gridline-color: #E0E0E0;
+    gridline-color: transparent; /* remove table grid lines */
     font-size: 13px;
-    selection-background-color: #E8F0FE;
-    selection-color: #0B5ED7;
+    selection-background-color: #CFE5FF; /* bright light blue highlight */
+    selection-color: #202124;
     outline: none;
+    border-radius: 8px; /* smooth rounded corners */
 }
 
 QTableWidget:focus, QTableView:focus {
     outline: none;
 }
 
+/* Table header */
 QHeaderView::section {
-    background-color: #F8F9FA;
+    background-color: #F5F5F5; /* slightly darker gray */
     color: #333;
     font-weight: 600;
     font-size: 13px;
     border: none;
-    border-bottom: 1px solid #E0E0E0;
+    border-bottom: 1px solid #DADADA;
     padding: 5px;
 }
 
-QTableWidget::item:selected {
-    background: #E8F0FE;
-    color: #0B5ED7;
+/* Selected row */
+QTableWidget::item:selected, QTableView::item:selected {
+    background: #CFE5FF; /* bright light blue highlight */
+    color: #202124;
+}
+
+/* Extend tables fully inside frames */
+#grpCategories QTableWidget,
+#grpIncome QTableWidget,
+#Card QTableWidget,
+#grpCategories QTableView,
+#grpIncome QTableView,
+#Card QTableView {
+    margin: 0px;
+    padding: 0px; /* full stretch inside frame */
 }
 
 /* Progress bar */
